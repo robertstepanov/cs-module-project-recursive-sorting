@@ -6,23 +6,23 @@ def merge(arrA, arrB):
     # Your code here
 
     arr = []
-    i = 0
-    j = 0
+    a = 0
+    b = 0
     # Sort until one array is done
-    while i < len(arrA) and j < len(arrB):
-        if arrA[i] < arrB[j]:
-            arr.append(arrA[i])
-            i += 1
+    while a < len(arrA) and b < len(arrB):
+        if arrA[a] < arrB[b]:
+            arr.append(arrA[a])
+            a += 1
         else:
-            arr.append(arrB[j])
-            j += 1
+            arr.append(arrB[b])
+            b += 1
     # The other list might still have elements, so append them after
-    while i < len(arrA):
-        arr.append(arrA[i])
-        i += 1
-    while j < len(arrB):
-        arr.append(arrB[j])
-        j += 1
+    while a < len(arrA):
+        arr.append(arrA[a])
+        a += 1
+    while b < len(arrB):
+        arr.append(arrB[b])
+        b += 1
 
     # for i in range(0, len(merged_arr)):
     #     if not arrA or arrA[0] > arrB[0]:
